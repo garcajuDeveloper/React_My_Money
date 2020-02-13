@@ -3,6 +3,11 @@ import PresupuestoInicial from './components/PresupuestoInicialComponent.js'
 import FormularioGastos from './components/FormularioGastos';
 import ListadoGastos from './components/ListadoGastos';
 import PresupuestoDashboard from './components/PresupuestoDashboard';
+import Error from './components/Error';
+import {
+        ERROR_SIN_PRESUPUESTO,
+        RESTANTE_ERROR_MESSAGE
+        } from './utils/Strings';
 
 function App() {
 
@@ -45,6 +50,12 @@ function App() {
                   presupuesto={presupuestoInicial}
                   restante={presupuestoRestante}
                 />
+                {presupuestoRestante <=0 ?
+                  <Error
+                    errorHeader = {ERROR_SIN_PRESUPUESTO}
+                    mensajeError = {RESTANTE_ERROR_MESSAGE}
+                  />:null
+                }
               </div>
             </div>
             <div>

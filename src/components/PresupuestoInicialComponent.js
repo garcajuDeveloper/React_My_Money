@@ -5,6 +5,7 @@ import {
         PRESUPUESTO_INICIAL_ERROR_MESSAGE,
         PRESUPUESTO_PLACEHOLDER,
         PRESUPUESTO_INICIAL_H2_TEXT,
+        ERROR_DATOS_INCORRECTO_INCOMPLETO,
         SUBMIT_BUTTON_TEXT
         } from '../utils/Strings';
 
@@ -34,7 +35,10 @@ const PresupuestoInicial = ({guardarPresupuesto, guardarRestante, mostrarInicial
     return(
         <Fragment>
             <h2>{PRESUPUESTO_INICIAL_H2_TEXT}</h2>
-            {error ? <Error mensajeError = {PRESUPUESTO_INICIAL_ERROR_MESSAGE}/> : null}
+            {error ? <Error 
+                        errorHeader = {ERROR_DATOS_INCORRECTO_INCOMPLETO}
+                        mensajeError = {PRESUPUESTO_INICIAL_ERROR_MESSAGE}
+                    /> : null}
             <form
                 className = "cantidad-inicial-form"
                 onSubmit = {validarPresupuesto}

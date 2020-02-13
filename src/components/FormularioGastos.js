@@ -9,6 +9,7 @@ import  {
             FORMULARIO_GASTOS_CONCEPTO_TEXT,
             FORMULARIO_GASTOS_CONCEPTO_LABEL_TEXT,
             FORMULARIO_GASTOS_SUBMIT_BUTTON_TEXT,
+            ERROR_DATOS_INCORRECTO_INCOMPLETO,
             FORMULARIO_GASTOS_ERROR_MESSAGE
         } from '../utils/Strings';
 
@@ -45,7 +46,10 @@ const FormularioGastos = ({agregarGasto, guardarCrearGasto}) => {
             onSubmit={creaGasto}
         >
             <h2>{FORMULARIO_GASTOS_H2_TEXT}</h2>
-            { error ? <Error mensajeError = {FORMULARIO_GASTOS_ERROR_MESSAGE} /> : null} 
+            { error ? <Error
+                        errorHeader = {ERROR_DATOS_INCORRECTO_INCOMPLETO}
+                        mensajeError = {FORMULARIO_GASTOS_ERROR_MESSAGE} 
+                        /> : null} 
             <div className="field">
             <label className ="label">{FORMULARIO_GASTOS_GASTO_LABEL_TEXT}</label>
                 <div className="is-grouped">
