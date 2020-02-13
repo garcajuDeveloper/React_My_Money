@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .alert p {
   margin-bottom: 0!important;
 }
 body {
   background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);  
-  background: linear-gradient(to right, #004e92, #000428); 
+  background: -webkit-linear-gradient(to right, #c0eaaf, #3ca612);  
+  background: linear-gradient(to right, #c0eaaf, #3ca612); 
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -16,7 +18,7 @@ header {
   padding:20px;
 }
 .contenido-principal {
-  background-color: white;
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 20px;
 }
@@ -31,14 +33,14 @@ header {
   margin-bottom: 30px;
 }
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
-  color: white;
+  color: rgb(3, 43, 151);
   text-align: center;
   font-size: 4rem!important;
 }
 h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   color:#004e92;
   margin-bottom:30px;
@@ -103,6 +105,6 @@ h2 {
 .gastos-realizados li p .gasto {
   border-radius: 5px;
   background-color: #004085;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   color:white;
 }
